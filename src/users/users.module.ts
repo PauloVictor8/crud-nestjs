@@ -6,6 +6,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://Admin:Vic58476921@crud-project.3hxajxl.mongodb.net/test',
+    ),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
   controllers: [UsersController],
